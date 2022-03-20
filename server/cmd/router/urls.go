@@ -6,8 +6,8 @@ type urls struct {
 }
 
 func GetURLs() urls {
-	var url_patterns urls
-	url_patterns.HOME_PATH = "/"
-	url_patterns.USER_PATH = "/users/"
-	return url_patterns
+	var urlPatterns urls
+	urlPatterns.HOME_PATH = "/"
+	urlPatterns.USER_PATH = "/users/"
+	return urlPatterns
 }

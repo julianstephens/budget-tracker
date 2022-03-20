@@ -8,9 +8,14 @@ import (
 func SetupRouter() *gin.Engine {
 	router := gin.Default()
 	app.Setup()
-	users := router.Group(GetURLs().USER_PATH)
+	urlPatterns := GetURLs()
+
+	api := router.Group("/api/")
 	{
-		setupUserRoutes(users)
+		users := router.Group(urlPatterns.USER_PATH)
+		{
+			setupUserRoutes(users)
+		}
 	}
 
 	return router
